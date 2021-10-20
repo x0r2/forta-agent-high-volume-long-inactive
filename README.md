@@ -1,3 +1,5 @@
+Please add me as a Agent Developer [Published] on Discord, my username is alte#8910
+
 # High Volume Long Inactive Agent
 
 ## Description
