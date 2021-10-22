@@ -1,6 +1,6 @@
 {
   "name": "forta-agent-high-volume-long-inactive",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Forta Agent detects transactions with high volume and long inactive addresses\n",
   "scripts": {
     "start": "npm run start:dev",
