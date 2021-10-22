@@ -41,8 +41,8 @@ function provideHandleTransaction(etherscanProvider) {
             return findings;
         }
 
-        const printableVolume = value.dividedBy(1000000000000000000);
-        const printableDays = Math.floor(inactiveTime / 86400);
+        const printableVolume = value.dividedBy(1000000000000000000); // 1 ETH
+        const printableDays = Math.floor(inactiveTime / 86400); // 1 day in seconds
 
         findings.push(
             Finding.fromObject({
