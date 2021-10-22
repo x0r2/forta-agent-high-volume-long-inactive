@@ -12,13 +12,11 @@ This agent detects transactions with high volume and long inactive addresses
 
 ## Alerts
 
-- FORTA-1
-  - Fired when a transaction volume more than 100 ETH and address wasn't active more than 1 year
-  - Severity is always "critical"
-  - Type is always "suspicious"
-  
-## Settings
-
-This agent need Etherscan API key for work. Create your API key and put it into forta.config.json:
-
-```"etherscanApiKey": "API_KEY"```
+- HIGH-VOLUME-LONG-INACTIVE-1
+    - Fired when a transaction volume more than 100 ETH and address wasn't active more than 1 year
+    - Severity is always "critical"
+    - Type is always "suspicious"
+    - Metadata fields:
+        - "from" - the address which is sending a high volume and was long inactive
+        - "value" - volume in wei
+        - "inactiveTime" - inactive time in seconds
