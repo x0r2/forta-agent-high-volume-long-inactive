@@ -2,14 +2,14 @@
 
 const ethers = require('ethers');
 
-class EtherscanProvider {
-    async getHistory(addressOrName, startBlock, endBlock) {
+class EtherscanProvider extends ethers.providers.EtherscanProvider {
+    async getHistoryDesc(addressOrName, startBlock, endBlock) {
         const params = {
             action: "txlist",
             address: (await this.resolveName(addressOrName)),
             startblock: ((startBlock == null) ? 0: startBlock),
             endblock: ((endBlock == null) ? 99999999: endBlock),
-            sort: "desc"
+            sort: "desc" // Changed
         };
 
         const result = await this.fetch("account", params);
@@ -27,3 +27,5 @@ class EtherscanProvider {
         });
     }
 }
+
+module.exports = EtherscanProvider;
